@@ -1,0 +1,13 @@
+CREATE TABLE todo_list (id INTEGER PRIMARY KEY, item TEXT, minutes INTEGER); -- Table creation with columns names and values
+
+INSERT INTO todo_list VALUES (1, "Wash the dishes", 15);
+INSERT INTO todo_list VALUES (2, "Vacuuming", 20);
+INSERT INTO todo_list VALUES (3, "Practice SQL", 30);
+INSERT INTO todo_list VALUES (4, 'Read', 30);
+INSERT INTO todo_list VALUES (5, "Work", 50);
+INSERT INTO todo_list VALUES (6, "Shopping", 20); -- Values inserted for the to do list
+
+SELECT SUM(minutes)
+FROM todo_list; -- Total of minutes to finish the to do list
+
+
