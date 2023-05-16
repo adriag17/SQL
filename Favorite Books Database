@@ -1,0 +1,10 @@
+CREATE TABLE books 
+(id integer primary key, name text, rating integer); -- Create names of columns and their values
+
+INSERT INTO books VALUES
+(1, 'The Tipping Point', 10),
+(2, 'Atomic Habits', 10),
+(3, 'Fifty Shades of Grey', 10); -- Insert values of each book selected
+
+SELECT * FROM books; -- Query of all books
+
