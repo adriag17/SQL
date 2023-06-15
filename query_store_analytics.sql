@@ -70,3 +70,15 @@ SELECT DISTINCT
     f.Quantity > 2
     AND length(orderid) = 6
     AND orderid <> 'Order ID'
+    
+#8. List all the products sold in Los Angeles in February, and include how many of each were sold. 
+  SELECT
+    Product,
+    SUM(quantity)
+  FROM
+    FebSales
+  WHERE
+    LOCATION LIKE '%Los Angeles%'
+  GROUP BY
+    Product
+
