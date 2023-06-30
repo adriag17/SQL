@@ -86,5 +86,24 @@ WHERE
 ORDER BY
 	duration_ms;
 
+#2.7 Temporary table CTE. Average popularity for artists.
+ WITH pop_avg AS (
+	SELECT
+		s.artist_name,
+		AVG(s.popularity) AS total_pop_avg
+	FROM
+		SpotifyData s
+	GROUP BY
+		s.artist_name
+)
+SELECT
+	artist_name,
+	total_pop_avg,
+	'Top Star' AS tag
+FROM
+	pop_avg
+WHERE
+	total_pop_avg >= 90;
+
 
   
