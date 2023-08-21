@@ -45,9 +45,9 @@ FROM
 WHERE
 	Title LIKE "%Sales%"
 
-# 5. SELECT DISTINCT
+# 5. Find a unique/distinct list of billing countries from the Invoice table.
+SELECT DISTINCT
 	BillingCountry
 FROM
 	invoices
-    
   
